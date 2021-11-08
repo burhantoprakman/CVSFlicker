@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="imageDetail"
+            type="com.example.cvsflicker.model.ImageDetail" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ImageDetailsActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image_detail_screen_image"
+        app:loadImage="@{imageDetail.media.mediaName}" />
+
+    <TextView
+        android:id="@+id/tv_witdh_and_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
+        android:textAlignment="textEnd"
+        android:contentDescription="@string/images_width_and_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tv_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:text="@{`Title :\n`+imageDetail.title}"
+        android:contentDescription="@string/image_s_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_witdh_and_height"
+        tools:text="TITLE" />
+
+    <TextView
+        android:id="@+id/tv_detail_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
+        android:text="@{`Author :\n`+ imageDetail.author}"
+        android:contentDescription="@string/image_s_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title"
+        />
+
+    <TextView
+        android:id="@+id/tv_detail_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
+        android:text="@{`Description :\n`+imageDetail.description}"
+        android:contentDescription="@string/image_s_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_author"
+        tools:text="DESCRIPTION"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

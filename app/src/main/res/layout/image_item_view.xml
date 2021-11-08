@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="image"
+            type="com.example.cvsflicker.model.ImageDetail" />
+    </data>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_16dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_thumbnail_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/main_screen_image"
+            app:loadImage="@{image.media.mediaName}" />
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            style="@style/TextViewStyle"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:text='@{image.title}'
+            android:layout_weight="1"
+            android:contentDescription="@string/main_screen_image_s_title"
+            app:layout_constraintTop_toBottomOf="@+id/iv_thumbnail_image" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</layout>

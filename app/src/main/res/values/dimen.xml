@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textView_text_size">16sp</dimen>
+    <dimen name="textview_margin">8dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+</resources>

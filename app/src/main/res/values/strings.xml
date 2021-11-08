@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CVSFlicker</string>
+    <string name="activity_ishow_images_search_photos">Search Photos</string>
+    <string name="activity_show_images_search">Search</string>
+    <string name="activity_show_images_recent_text">You have no recent searches. Enter a search term above</string>
+    <string name="main_screen_image">Main screen image</string>
+    <string name="main_screen_image_s_title">Main screen image\'s title</string>
+    <string name="search_edit_text">Search edit text</string>
+    <string name="search_button">Search button</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="recent_searches_list">Recent searches list</string>
+    <string name="image_detail_screen_image">Image detail screen image</string>
+    <string name="images_width_and_height">Images width and height</string>
+    <string name="image_s_title">Image\'s title</string>
+    <string name="image_s_author">Image\'s author</string>
+    <string name="image_s_description">Image\'s description</string>
+</resources>
